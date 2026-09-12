@@ -16,6 +16,18 @@
 
 评分用于辅助审阅。引用能够定位到材料，不等于模型判断已经得到证实；少量轮次也不能支持稳定排名。
 
+## 运行截图
+
+以下为本地运行界面，论文标识与 API Key 输入区已遮盖。截图展示当次运行设置，评分为批次进行中的阶段性结果。
+
+**评审工作流与 API 设置**
+
+![四步评审工作流及 API 参数设置，API Key 输入区已遮盖](docs/images/workspace-settings-redacted.png)
+
+**五维评分汇总与轮廓**
+
+![评分进行中的五维汇总表与雷达图，论文标识已遮盖](docs/images/score-overview-redacted.png)
+
 ## 从源码启动
 
 当前完整桌面工作流面向 Linux，已在 Ubuntu 22.04 x86_64 验证。需要 Python 3.10+；Node.js 20+ 用于报告导出与测试；PDF 文字提取和页数检查需要 Poppler 的 `pdftotext`、`pdfinfo`。Python 程序使用标准库，无须安装 pip 包。MinerU 是另外的主机依赖，见下节。
