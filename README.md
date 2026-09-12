@@ -1,4 +1,8 @@
-# Paperbench Research · 论文评审工作台
+<p align="center">
+  <img src="docs/images/paperbench-logo.svg" alt="Paperbench Research Logo" width="104" height="104">
+</p>
+
+<h1 align="center">Paperbench Research · 论文评审工作台</h1>
 
 **v2.5.0** — 在本机组织论文、调用模型评审、按固定规则计分，并保存可离线阅读的完整报告。
 
