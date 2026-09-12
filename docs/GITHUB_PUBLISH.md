@@ -1,6 +1,6 @@
 # GitHub 发布说明
 
-此目录为 Paperbench Research v2.5.0 的本地 GitHub 准备副本。应用源码与现有 AppImage 保持快照内容；新增仓库文档、忽略规则、CI、Issue/PR 模板和检查工具。准备工作不包含创建远程仓库、推送、打标签或发布 Release。
+Paperbench Research 已发布到公开仓库 [last-dive/paper-benchmark-git](https://github.com/last-dive/paper-benchmark-git)，[v2.5.0 发布页](https://github.com/last-dive/paper-benchmark-git/releases/tag/v2.5.0) 提供 AppImage 和配套附件。访问项目与下载安装包无需仓库邀请。应用源码与现有 AppImage 保持快照内容；仓库另包含文档、忽略规则、CI、Issue/PR 模板和检查工具。
 
 ## 目录与发布内容
 
@@ -30,7 +30,7 @@ python3 run_tests.py
 
 `check_repo.py` 检查 Git 跟踪或候选文件中的已知敏感内容模式与仓库约束；`--verify-snapshot` 额外核对初始应用文件哈希，`--check-release` 额外核对本地 `dist/` 交付文件。它不能判断每段正文是否包含个人资料或未公开论文，提交前仍需阅读实际暂存内容。
 
-本地初始分支为 `main`，还没有初始提交或远程地址。应用尚未指定开源许可证；发布前根据 [LICENSE-NOTICE.md](../LICENSE-NOTICE.md) 明确应用许可安排，并核对 [第三方组件说明](../THIRD_PARTY_NOTICES.md)。仓库配套文件不会自动授予应用的开源许可。
+当前分支为 `main`，`origin` 已连接到上述仓库，`v2.5.0` 标签及 Release 均已存在。下方首次提交和发布命令仅供新仓库参考，现有项目无需重复执行。应用尚未指定开源许可证，见 [LICENSE-NOTICE.md](../LICENSE-NOTICE.md) 和 [第三方组件说明](../THIRD_PARTY_NOTICES.md)；仓库公开可见不会自动授予应用的开源许可。
 
 ## 首次提交和推送
 
