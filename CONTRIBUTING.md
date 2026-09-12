@@ -1,6 +1,6 @@
 # 参与开发
 
-先阅读 [README](README.md) 中的材料流程、计分约束和当前 MinerU 主机限制。应用许可尚未确定，见 [LICENSE-NOTICE.md](LICENSE-NOTICE.md)；提交者应确保有权提供所提交的内容。
+先阅读 [README](README.md) 中的材料流程、计分约束和当前 MinerU 主机限制。项目原创部分采用 [PolyForm Noncommercial 1.0.0](LICENSE)，范围见 [LICENSE-NOTICE.md](LICENSE-NOTICE.md)。提交者应确保有权提供所提交的内容，并在相应权利范围内同意其贡献按本项目许可提供；第三方内容须保留原许可和归属，不得擅自改用项目许可。
 
 ## 本地工作流
 

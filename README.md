@@ -4,7 +4,7 @@
 
 <h1 align="center">Paperbench Research · 论文评审工作台</h1>
 
-**v2.5.0** — 在本机组织论文、调用模型评审、按固定规则计分，并保存可离线阅读的完整报告。
+**v2.5.0 · 非商业源码可用** — 在本机组织论文、调用模型评审、按固定规则计分，并保存可离线阅读的完整报告。
 
 模型审查贡献、严谨、证据、公平、一致五个维度，共二十个固定检查项；程序负责校验来源、计算分数和汇总多轮结果。报告保留冻结参数、原始请求与响应、完整理由、引用和失败记录，方便人工核查。
 
@@ -56,7 +56,7 @@ python3 configure_local.py
 
 ## 使用 AppImage
 
-从 [v2.5.0 发布页](https://github.com/last-dive/paper-benchmark-git/releases/tag/v2.5.0) 下载 AppImage、打包源码、第三方许可文件和 SHA-256 校验清单。当前仓库已公开，无需仓库邀请即可查看项目和下载安装包。
+从 [v2.5.0 发布页](https://github.com/last-dive/paper-benchmark-git/releases/tag/v2.5.0) 下载 AppImage、打包源码、第三方许可文件和 SHA-256 校验清单。当前仓库已公开，无需仓库邀请即可查看项目和下载安装包。请同时下载发布页中的 `Paperbench-Licensing-and-Notices-2.5.0-20260913.tar.gz` 及对应 `.sha256`，以取得本次补充的项目许可、引用与第三方版权材料。
 
 本地交付副本位于 `dist/Paperbench-Research-2.5.0-x86_64.AppImage`。`dist/` 保留在本机并被 Git 忽略；通过 Git 克隆不会获得此文件。将发布页下载的 AppImage 放入 `dist/` 后，可使用下方命令启动。
 
@@ -146,4 +146,12 @@ python3 tools/check_repo.py
 
 Git 跟踪应用源码、测试、AppImage 构建源码、发布校验清单和文档。`dist/` 与 `local-snapshot/` 仅保存在本地；前者包含现有交付包，后者保留原安装说明等快照资料。
 
-首次提交、连接远程仓库和创建草稿 Release 的步骤见 [GitHub 发布说明](docs/GITHUB_PUBLISH.md)。应用代码尚未指定开源许可证，见 [LICENSE-NOTICE.md](LICENSE-NOTICE.md)；随包组件另见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+当前公开仓库与发布流程见 [GitHub 发布说明](docs/GITHUB_PUBLISH.md)。
+
+## 许可、引用与致谢
+
+项目原创部分采用 [PolyForm Noncommercial 1.0.0](LICENSE)：可按条款为非商业目的使用、修改和分发，须保留许可与 [NOTICE](NOTICE)；超出许可范围的商业使用需另行授权。准确称为“非商业源码可用”，并非 OSI 定义的开源许可。适用范围和中文说明见 [LICENSE-NOTICE.md](LICENSE-NOTICE.md)。
+
+第三方组件继续适用各自原有条款，项目的非商业限制不覆盖它们。完整组件索引、版权文本及来源见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。感谢 Python、Node.js、Poppler、AppImage、MinerU 及所有相关库和工具的维护者；详细名单、官方链接与研究引用见 [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md)。
+
+研究中引用本软件可使用仓库的 [CITATION.cff](CITATION.cff)；使用 MinerU 等上游工具时，请同时参考其官方引用要求。

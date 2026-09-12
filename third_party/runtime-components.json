@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "runtimeCommit": "75849dce7cc37e4319b633df1f116ca895c71a12",
+  "runtimeSHA256": "1cc49bcf1e2ccd593c379adb17c9f85a36d619088296504de95b1d06215aebbf",
+  "scope": "Static linked components identified by the fixed runtime build and upstream LICENSE; supplementary notice snapshots do not prove the exact versions of unpinned Alpine dependencies or supply complete corresponding source/relink material.",
+  "components": [
+    {
+      "name": "libfuse",
+      "upstream": "https://github.com/libfuse/libfuse",
+      "buildPinnedVersion": "3.15.0",
+      "license": "LGPL-2.1 for include/lib; GPL-2.0 for other source files",
+      "evidence": "install-dependencies.sh pins release tarball and SHA256; applies a mount.c patch from runtime source",
+      "sourceArchive": "https://github.com/libfuse/libfuse/releases/download/fuse-3.15.0/fuse-3.15.0.tar.xz",
+      "sourceArchiveSHA256": "70589cfd5e1cff7ccd6ac91c86c01be340b227285c5e200baa284e401eea2ca0"
+    },
+    {
+      "name": "squashfuse",
+      "upstream": "https://github.com/vasi/squashfuse",
+      "buildPinnedVersion": "0.5.2",
+      "license": "BSD-2-Clause",
+      "evidence": "install-dependencies.sh pins source archive and SHA256",
+      "sourceArchive": "https://github.com/vasi/squashfuse/archive/0.5.2.tar.gz",
+      "sourceArchiveSHA256": "db0238c5981dabbd80ee09ae15387f390091668ca060a7bc38047912491443d3"
+    },
+    {
+      "name": "musl",
+      "upstream": "https://musl.libc.org/",
+      "buildPinnedVersion": null,
+      "noticeSourceVersion": "1.2.5",
+      "license": "MIT and notices listed in COPYRIGHT",
+      "evidence": "Alpine 3.21 base; exact build package revision not recorded"
+    },
+    {
+      "name": "zstd",
+      "upstream": "https://github.com/facebook/zstd",
+      "buildPinnedVersion": null,
+      "noticeSourceVersion": "1.5.6",
+      "license": "BSD-3-Clause OR GPL-2.0",
+      "evidence": "Makefile -lzstd and Alpine 3.21 unpinned package; runtime has 1.5.6 string (corroboration, not a complete binary provenance proof)"
+    },
+    {
+      "name": "zlib",
+      "upstream": "https://zlib.net/",
+      "buildPinnedVersion": null,
+      "noticeSourceVersion": "1.3.1",
+      "license": "Zlib",
+      "evidence": "Makefile -lz and Alpine 3.21 unpinned package; exact build package revision not recorded"
+    },
+    {
+      "name": "mimalloc",
+      "upstream": "https://github.com/microsoft/mimalloc",
+      "buildPinnedVersion": null,
+      "noticeSourceVersion": "2.1.7",
+      "license": "MIT",
+      "evidence": "Makefile -lmimalloc, Alpine 3.21 mimalloc-dev, and runtime mimalloc strings; exact package revision not recorded"
+    }
+  ],
+  "files": [
+    {
+      "component": "libfuse",
+      "path": "third_party/appimage-runtime/dependency-licenses/libfuse/LICENSE",
+      "sourceUrl": "https://github.com/libfuse/libfuse/blob/fuse-3.15.0/LICENSE",
+      "sourceRef": "fuse-3.15.0",
+      "gitBlobSHA": "184a5b27c6cfec5ff4c70ab186ab94c82dae1de3",
+      "sha256": "b8832d9caaa075bbbd2aef24efa09f8b7ab66a832812d88c602da0c7b4397fad",
+      "bytes": 435
+    },
+    {
+      "component": "libfuse",
+      "path": "third_party/appimage-runtime/dependency-licenses/libfuse/LGPL2.txt",
+      "sourceUrl": "https://github.com/libfuse/libfuse/blob/fuse-3.15.0/LGPL2.txt",
+      "sourceRef": "fuse-3.15.0",
+      "gitBlobSHA": "4362b49151d7b34ef83b3067a8f9c9f877d72a0e",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "bytes": 26530
+    },
+    {
+      "component": "libfuse",
+      "path": "third_party/appimage-runtime/dependency-licenses/libfuse/GPL2.txt",
+      "sourceUrl": "https://github.com/libfuse/libfuse/blob/fuse-3.15.0/GPL2.txt",
+      "sourceRef": "fuse-3.15.0",
+      "gitBlobSHA": "d159169d1050894d3ea3b98e1c965c4058208fe1",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "bytes": 18092
+    },
+    {
+      "component": "squashfuse",
+      "path": "third_party/appimage-runtime/dependency-licenses/squashfuse/LICENSE",
+      "sourceUrl": "https://github.com/vasi/squashfuse/blob/0.5.2/LICENSE",
+      "sourceRef": "0.5.2",
+      "gitBlobSHA": "2c821bbaa662c7e863424b0523f032b77ab75d87",
+      "sha256": "9e909cc8a8ba27b1a649c964cf9eda37de911f3138c2b64e6d2f01703904ac13",
+      "bytes": 1592
+    },
+    {
+      "component": "zstd",
+      "path": "third_party/appimage-runtime/dependency-licenses/zstd/LICENSE",
+      "sourceUrl": "https://github.com/facebook/zstd/blob/v1.5.6/LICENSE",
+      "sourceRef": "v1.5.6",
+      "gitBlobSHA": "75800288cc243f164b9d130f125e2ffae28f8e39",
+      "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8",
+      "bytes": 1549
+    },
+    {
+      "component": "zstd",
+      "path": "third_party/appimage-runtime/dependency-licenses/zstd/COPYING",
+      "sourceUrl": "https://github.com/facebook/zstd/blob/v1.5.6/COPYING",
+      "sourceRef": "v1.5.6",
+      "gitBlobSHA": "ecbc0593737be657aef92e3adcf3bcbd6fdb812e",
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505",
+      "bytes": 18091
+    },
+    {
+      "component": "mimalloc",
+      "path": "third_party/appimage-runtime/dependency-licenses/mimalloc/LICENSE",
+      "sourceUrl": "https://github.com/microsoft/mimalloc/blob/v2.1.7/LICENSE",
+      "sourceRef": "v2.1.7",
+      "gitBlobSHA": "670b668a0c928e5c29439d6dbf43091ed8932f56",
+      "sha256": "19c99805e7a44a34b297a75d1edea9985e300066dfc024d5c99d4236d4573b5d",
+      "bytes": 1096
+    },
+    {
+      "component": "zlib",
+      "path": "third_party/appimage-runtime/dependency-licenses/zlib/LICENSE",
+      "sourceUrl": "https://github.com/madler/zlib/blob/v1.3.1/LICENSE",
+      "sourceRef": "v1.3.1",
+      "gitBlobSHA": "ab8ee6f71428c3e4646b12b64ad387cde33462e5",
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243",
+      "bytes": 1002
+    },
+    {
+      "component": "musl",
+      "path": "third_party/appimage-runtime/dependency-licenses/musl/COPYRIGHT",
+      "sourceUrl": "https://git.musl-libc.org/cgit/musl/plain/COPYRIGHT?h=v1.2.5",
+      "sourceRef": "v1.2.5",
+      "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af",
+      "bytes": 6204
+    }
+  ],
+  "buildEvidence": [
+    {
+      "path": "third_party/appimage-runtime/build-evidence/scripts/common/install-dependencies.sh",
+      "sourceUrl": "https://github.com/AppImage/type2-runtime/blob/75849dce7cc37e4319b633df1f116ca895c71a12/scripts/common/install-dependencies.sh",
+      "sha256": "45cf79ad6570c75c1f06bcbb629e4d55fbc5c6b1d44e974bb6037b1c209ed170"
+    },
+    {
+      "path": "third_party/appimage-runtime/build-evidence/scripts/docker/Dockerfile",
+      "sourceUrl": "https://github.com/AppImage/type2-runtime/blob/75849dce7cc37e4319b633df1f116ca895c71a12/scripts/docker/Dockerfile",
+      "sha256": "e0a4abe81c1918516f7b6b9cdb9fdbb768f57c6fc392767537b45142aba45f74"
+    },
+    {
+      "path": "third_party/appimage-runtime/build-evidence/src/runtime/Makefile",
+      "sourceUrl": "https://github.com/AppImage/type2-runtime/blob/75849dce7cc37e4319b633df1f116ca895c71a12/src/runtime/Makefile",
+      "sha256": "71fd92c0e6c7c10ef5a932f5007e4dc61403ed471330e5841782b4233131b053"
+    }
+  ]
+}

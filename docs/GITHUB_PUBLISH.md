@@ -30,7 +30,7 @@ python3 run_tests.py
 
 `check_repo.py` 检查 Git 跟踪或候选文件中的已知敏感内容模式与仓库约束；`--verify-snapshot` 额外核对初始应用文件哈希，`--check-release` 额外核对本地 `dist/` 交付文件。它不能判断每段正文是否包含个人资料或未公开论文，提交前仍需阅读实际暂存内容。
 
-当前分支为 `main`，`origin` 已连接到上述仓库，`v2.5.0` 标签及 Release 均已存在。下方首次提交和发布命令仅供新仓库参考，现有项目无需重复执行。应用尚未指定开源许可证，见 [LICENSE-NOTICE.md](../LICENSE-NOTICE.md) 和 [第三方组件说明](../THIRD_PARTY_NOTICES.md)；仓库公开可见不会自动授予应用的开源许可。
+当前分支为 `main`，`origin` 已连接到上述仓库，`v2.5.0` 标签及 Release 均已存在。下方首次提交和发布命令仅供新仓库参考，现有项目无需重复执行。项目原创部分采用 [PolyForm Noncommercial 1.0.0](../LICENSE)，属于非商业源码可用许可；范围见 [LICENSE-NOTICE.md](../LICENSE-NOTICE.md)。第三方组件按 [原有独立条款](../THIRD_PARTY_NOTICES.md) 分发。
 
 ## 首次提交和推送
 

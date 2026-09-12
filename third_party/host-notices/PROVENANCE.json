@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-13",
+  "purpose": "Verbatim notices for directly referenced optional host packages; these packages are not bundled in Paperbench Research 2.5.0.",
+  "method": "Read installed dist-info metadata and copy declared license files without importing packages or running host environment commands.",
+  "limitations": [
+    "License summary labels do not replace component-specific terms in the saved original files.",
+    "Installed distribution provenance has not been matched to an immutable upstream source commit.",
+    "This inventory does not audit all transitive MinerU or Conda environment dependencies, CUDA components, model weights, or external API services."
+  ],
+  "packages": [
+    {
+      "distribution": "mineru",
+      "version": "3.4.5",
+      "scope": "optional host installation; not redistributed in the AppImage",
+      "metadataSource": "/home/xx/anaconda3/envs/mineru34/lib/python3.12/site-packages/mineru-3.4.5.dist-info/METADATA",
+      "metadataSha256": "bffd25164bed75b23b681ca01e52016b0df629f81710e64c126adf7ee9358499",
+      "licenseExpression": "LicenseRef-MinerU-Open-Source-License",
+      "licenseField": null,
+      "declaredLicenseFiles": [
+        "LICENSE.md"
+      ],
+      "officialProjectUrl": "https://github.com/opendatalab/MinerU",
+      "officialLicenseUrl": "https://github.com/opendatalab/MinerU/blob/master/LICENSE.md",
+      "upstreamCommitForInstalledDistribution": null,
+      "files": [
+        {
+          "path": "mineru-3.4.5/LICENSE.md",
+          "sourcePath": "/home/xx/anaconda3/envs/mineru34/lib/python3.12/site-packages/mineru-3.4.5.dist-info/licenses/LICENSE.md",
+          "bytes": 3301,
+          "sha256": "2d9aeb5d15159329a20dd804f251c64860ba954fbd26ec02f802220e6d71cf5c",
+          "unchangedBytes": true
+        }
+      ]
+    },
+    {
+      "distribution": "torch",
+      "version": "2.11.0",
+      "scope": "optional host installation; not redistributed in the AppImage",
+      "metadataSource": "/home/xx/anaconda3/envs/mineru34/lib/python3.12/site-packages/torch-2.11.0.dist-info/METADATA",
+      "metadataSha256": "d65e0ab5a65ced0dce799a2f6f32bff57b3d3e9d050069f607ef71eb24dd9976",
+      "licenseExpression": null,
+      "licenseField": "BSD-3-Clause",
+      "declaredLicenseFiles": [
+        "LICENSE",
+        "NOTICE"
+      ],
+      "officialProjectUrl": "https://github.com/pytorch/pytorch",
+      "officialLicenseUrl": "https://github.com/pytorch/pytorch/blob/main/LICENSE",
+      "upstreamCommitForInstalledDistribution": null,
+      "files": [
+        {
+          "path": "torch-2.11.0/LICENSE",
+          "sourcePath": "/home/xx/anaconda3/envs/mineru34/lib/python3.12/site-packages/torch-2.11.0.dist-info/licenses/LICENSE",
+          "bytes": 351341,
+          "sha256": "a0d7abc10248a062a2f309bf12981524973f2a61aadccf4c5099d96d8c388cf4",
+          "unchangedBytes": true
+        },
+        {
+          "path": "torch-2.11.0/NOTICE",
+          "sourcePath": "/home/xx/anaconda3/envs/mineru34/lib/python3.12/site-packages/torch-2.11.0.dist-info/licenses/NOTICE",
+          "bytes": 23632,
+          "sha256": "c2cc7bf0caec7652c2b460a8a470bea1677f241e4ab8e431df34cf17f5a9fec0",
+          "unchangedBytes": true
+        }
+      ]
+    }
+  ]
+}

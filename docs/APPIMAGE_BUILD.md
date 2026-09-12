@@ -74,7 +74,7 @@ python3.10 appimage/prepare_delivery.py --target-dist "$PWD/appimage/delivery"
 
 输出位于 `appimage/delivery/`。这里显式传入 `--target-dist`，因为归档脚本的默认桌面快捷方式目标仍是原安装目录。这个参数决定生成的 `.desktop` 文件使用哪个安装位置；移动交付目录后，应更新该快捷方式中的路径。该步骤不会上传、发布或安装应用。
 
-重新打包仍沿用原打包器的许可证收集逻辑，不会自动把本仓库新增的 `third_party/` 材料装入 AppImage。第三方材料及其核验边界见 [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md)。
+重新打包仍沿用原打包器的许可证收集逻辑，不会自动把本仓库新增的 `third_party/` 材料装入 AppImage。第三方材料及其核验边界见 [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md)。 当前发布页另提供许可与致谢补充附件，包含项目 `LICENSE`、`NOTICE` 和新增第三方材料；发布重建版本时，应按该次真实依赖更新并一同提供这些材料，不能把初始 28 份包内文件视为全部组件声明。
 
 ## 版本保护与源码清单
 

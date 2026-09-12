@@ -1,40 +1,47 @@
-# 第三方组件与许可证来源
+# 第三方组件、引用与版权声明
 
-本目录整理现有 **Paperbench Research 2.5.0 AppImage** 的第三方版权文件，并补充其中引用的通用许可证正文。它不为项目自身选择许可证；项目自身的授权状态见 [LICENSE-NOTICE.md](LICENSE-NOTICE.md)。
+Paperbench Research 感谢所有上游作者和维护者。**第三方组件继续适用各自原有的许可和版权声明；本项目的非商业许可不限制它们原先授予的权利。** 项目原创部分的范围见 [LICENSE-NOTICE.md](LICENSE-NOTICE.md)，软件与研究引用见 [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md)。
 
-## 已保存的材料
+本清单针对保存的 **v2.5.0 AppImage** 与当前桥接代码，区分实际随包分发的组件、主机可选依赖、构建工具和外部模型服务。未将一份虚拟环境中所有已安装包都当作本应用的直接依赖。
 
-| 材料 | 位置 | 来源与核验 |
+## 完整组件索引
+
+| 范围 | 索引与原始材料 | 核验方法 |
 | --- | --- | --- |
-| 包内现有的 28 份版权文件 | [third_party/bundled-notices/](third_party/bundled-notices/) | 从已有构建目录复制；逐一核对原 AppImage 内的实际文件，以及 `release/v2.5.0/bundle-manifest.json` 中的 SHA256。 |
-| 被上述版权文件引用的 13 份通用许可证正文 | [third_party/common-licenses/](third_party/common-licenses/) | 复制自主机 `/usr/share/common-licenses`；保留被引用的文件名，清单记录原始路径、符号链接解析后的文件名和 SHA256。 |
-| 与现有 AppImage 运行时版本对应的上游 LICENSE | [third_party/appimage-runtime/LICENSE](third_party/appimage-runtime/LICENSE) | 从 AppImage 官方仓库的固定提交下载；来源与版本说明见下文。 |
-| 每个文件的来源、字节数和 SHA256 | [third_party/INVENTORY.json](third_party/INVENTORY.json) | 可独立复核的材料清单。 |
+| AppImage 中的 Python、Poppler、系统动态库、扩展模块与数据 | [BUNDLED_DEPENDENCIES.md](third_party/BUNDLED_DEPENDENCIES.md)、[bundled-components.json](third_party/bundled-components.json) | 对实际包文件与发行版包进行字节/哈希对应，记录包版本、上游和版权文件。 |
+| Node.js 与其内嵌第三方组件 | 同一 [随包索引](third_party/BUNDLED_DEPENDENCIES.md) 和 [原始 Node LICENSE](third_party/bundled-notices/node.txt) | 核对官方相同版本发行物的 Node 二进制与 LICENSE；内嵌组件使用其独立条款。原 LICENSE 的构建/测试材料不一概视为运行时功能。 |
+| AppImage runtime 与静态库 | [runtime-components.json](third_party/runtime-components.json)、[运行时 LICENSE](third_party/appimage-runtime/LICENSE)、[静态库许可正文](third_party/appimage-runtime/dependency-licenses/) | 运行时自身报告的固定提交、固定版本构建脚本、源码档哈希和上游版权文本。 |
+| 当前主机的 MinerU、PyTorch、模型配置与工具 | [HOST_DEPENDENCIES.md](third_party/HOST_DEPENDENCIES.md)、[host-notices/](third_party/host-notices/) | 仅读取已安装版本元数据及许可证；模型、CUDA、驱动和宿主环境不在 AppImage 中。 |
+| 构建、CI、浏览器能力及外部服务 | [致谢与引用](ACKNOWLEDGMENTS.md)、[主机依赖说明](third_party/HOST_DEPENDENCIES.md) | 按源码实际调用关系区分；外部 API、服务条款与模型许可独立管理。 |
 
-28 份包内文件包括 Python 3.10、Node.js、Poppler 工具及若干动态库的版权说明。原打包脚本只复制了它明确列出的系统包版权文件和检测到的 Node.js `LICENSE`。本次补充文件保存在仓库中，**没有改写已有 AppImage，也没有修改原打包脚本**。
+## 保存的版权材料
 
-部分版权文件引用 `GPL`、`LGPL`、`GFDL` 等通用文件名。这里保留了原始名称，并在清单中记录主机实际解析的版本；不能据此把单个组件的授权条件简化成这些别名对应的最新版本，应结合该组件的版权说明阅读。
+原有 28 份包内版权文件位于 [bundled-notices/](third_party/bundled-notices/)，其来源与 SHA-256 记录在 [初始 INVENTORY.json](third_party/INVENTORY.json)。另有原版权文件引用的 13 份 [通用许可证正文](third_party/common-licenses/)，保留原文件名；这些别名不能代替每个组件实际指定的许可证版本。
 
-## AppImage 运行时
+本次补充缺失的系统包版权文件，并记录在 [SUPPLEMENTAL_INVENTORY.json](third_party/SUPPLEMENTAL_INVENTORY.json)；新增内容覆盖原说明遗漏的 Brotli、Kerberos、Poppler 字符映射数据及 Python 分包等。所有材料保留上游原文。不同文件的多个许可证、例外、作者清单应一并阅读，不能用一个概括标签覆盖它们。
 
-保留的 AppImage SHA256：
+运行时静态库另外保存 9 份许可/版权文件，覆盖 **musl、libfuse、squashfuse、zstd、zlib、mimalloc**。其中 mimalloc 在固定 Makefile 中以 `-lmimalloc` 链接，原运行时顶层 LICENSE 的依赖列表没有列出它，故在本次索引中补充。libfuse 的库和头文件使用 LGPL 条款，其他源码部分另有 GPL 条款；两份正文均保留。
+
+## 固定安装包与运行时身份
+
+现有 AppImage 的 SHA-256：
 
 ```text
 3af2201381c87a18e46eba301a11e4ec3f5ec942877a7f8ca8746d9f3a2df94b
 ```
 
-其前 944,632 字节与 `appimage/vendor/runtime-x86_64` 完全一致，运行时 SHA256 为：
+其前 944,632 字节与 `appimage/vendor/runtime-x86_64` 一致，运行时 SHA-256：
 
 ```text
 1cc49bcf1e2ccd593c379adb17c9f85a36d619088296504de95b1d06215aebbf
 ```
 
-该二进制的 `--appimage-version` 输出提交 `75849dc`。官方仓库将它解析为完整提交 [`75849dce7cc37e4319b633df1f116ca895c71a12`](https://github.com/AppImage/type2-runtime/tree/75849dce7cc37e4319b633df1f116ca895c71a12)。本仓库复制了该提交的[上游 LICENSE](https://github.com/AppImage/type2-runtime/blob/75849dce7cc37e4319b633df1f116ca895c71a12/LICENSE)，没有使用持续变化的 `continuous` 发布链接来推断许可证版本。
+运行时报告提交 `75849dc`，对应 [`75849dce7cc37e4319b633df1f116ca895c71a12`](https://github.com/AppImage/type2-runtime/tree/75849dce7cc37e4319b633df1f116ca895c71a12)。本次保留了该提交的 [构建证据](third_party/appimage-runtime/build-evidence/)，未执行这些上游构建脚本。其依赖脚本固定了 libfuse 3.15.0 与 squashfuse 0.5.2 的源码和校验值；Alpine 3.21 提供的其余静态依赖未全部固定包修订号，因此索引对“构建已固定版本”和“补充版权文本的来源版本”作了区分，不将后者冒充二进制版本证明。
 
-该文件包含运行时代码的 MIT 许可条款，并列出静态链接的 musl、libfuse、squashfuse、libzstd、zlib 的独立许可来源。复制这份上游文件不代表这些静态依赖的全部源码、构建材料和许可证明已收集完毕。
+## 对应源码与再分发边界
 
-## 本清单的边界
+这些文件是依赖归属、版权文本和来源证据，**不等于所有 GPL/LGPL 组件的完整对应源码、构建环境或重链接材料**。随包索引提供了能核对的源包版本和上游来源；发布者仍需按相关 GPL/LGPL 条款提供其要求的材料，不能仅以“已致谢”替代相应义务。运行时的固定构建源码也包含 libfuse 补丁，应和相关源码一起核对。
 
-本次工作核验的是版权材料的来源与文件完整性，未完成所有二进制组件的版本与源代码逐一对应，也未提供完整的第三方对应源码包。原打包器通过 `ldd` 收集动态库，其复制的库集合比显式版权文件清单更广；例如包内存在 Brotli、Kerberos 等库，而原来的 28 份文件中没有以这些系统包名命名的独立说明。
+本项目不把整个 AppImage 重新授权为 PolyForm Noncommercial。原创程序通过独立进程调用 PDF 工具；包内库、独立工具以及其修改的授权关系仍由各自条款决定。GNU 对独立组件集合的说明见 [GPL FAQ：Mere Aggregation](https://www.gnu.org/licenses/gpl-faq.en.html#MereAggregation)。
 
-因此，本文件不声称整个 AppImage 的再分发义务已全部核验。未来分发新构建时，应针对实际使用的运行时、库版本及其许可条款核对所需材料。主机 MinerU、Conda、CUDA、GPU 驱动和模型权重没有包含在这个 AppImage 中，其来源与授权由各自安装单独管理。
+本次新增许可资料以独立的 `Paperbench-Licensing-and-Notices-2.5.0-20260913.tar.gz` 附在 [v2.5.0 发布页](https://github.com/last-dive/paper-benchmark-git/releases/tag/v2.5.0)，附带独立 SHA-256 校验文件。既有 AppImage 与原校验清单保持不变，旧包内部仍是原先的版权文件集合。转发已有安装包时，应同时提供这份补充资料并遵守每个第三方组件的适用条款；未来重建应把当时实际依赖的材料随新包收集和验证。

@@ -1,0 +1,773 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-09-13",
+  "preserved_appimage_sha256": "3af2201381c87a18e46eba301a11e4ec3f5ec942877a7f8ca8746d9f3a2df94b",
+  "scope": "New supplemental notices and evidence; original INVENTORY.json remains unchanged.",
+  "files": [
+    {
+      "path": "third_party/supplemental-notices/libbrotli1.txt",
+      "bytes": 1354,
+      "sha256": "24a64e5bb83d0960d1835696a1e23c0896ad6055b0ca47c66ab0eb9a766324b1",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libbrotli1/copyright",
+        "resolved_path": "/usr/share/doc/libbrotli1/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libbrotli1:amd64",
+              "version": "1.0.9-2build6",
+              "source_package": "brotli",
+              "source_version": "1.0.9-2build6",
+              "homepage": "https://github.com/google/brotli"
+            },
+            "dpkg_expected_md5": "88a64abee92ba0e2810574d815fa4900",
+            "actual_md5": "88a64abee92ba0e2810574d815fa4900",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libbrotli1:amd64",
+        "matched_package_version": "1.0.9-2build6"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libcom-err2.txt",
+      "bytes": 1154,
+      "sha256": "9e3a4384b6d8d2358d44103f62bcd948328b3f8a63a1a6baa66abeb43302d581",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libcom-err2/copyright",
+        "resolved_path": "/usr/share/doc/libcom-err2/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libcom-err2:amd64",
+              "version": "1.46.5-2ubuntu1.2",
+              "source_package": "e2fsprogs",
+              "source_version": "1.46.5-2ubuntu1.2",
+              "homepage": "http://e2fsprogs.sourceforge.net"
+            },
+            "dpkg_expected_md5": "dfb3e511190f0d507e578e663d3899e1",
+            "actual_md5": "dfb3e511190f0d507e578e663d3899e1",
+            "dpkg_payload_verified": true
+          },
+          {
+            "package": {
+              "package": "libcom-err2:i386",
+              "version": "1.46.5-2ubuntu1.2",
+              "source_package": "e2fsprogs",
+              "source_version": "1.46.5-2ubuntu1.2",
+              "homepage": "http://e2fsprogs.sourceforge.net"
+            },
+            "dpkg_expected_md5": "dfb3e511190f0d507e578e663d3899e1",
+            "actual_md5": "dfb3e511190f0d507e578e663d3899e1",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libcom-err2:amd64",
+        "matched_package_version": "1.46.5-2ubuntu1.2"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libdb5.3.txt",
+      "bytes": 7517,
+      "sha256": "b3bbc6fbb3f2a0e6a487e953eb8c3cc4bdb6f4150f7f51d20b1e9a3c8ef92d3d",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libdb5.3/copyright",
+        "resolved_path": "/usr/share/doc/libdb5.3/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libdb5.3:amd64",
+              "version": "5.3.28+dfsg1-0.8ubuntu3",
+              "source_package": "db5.3",
+              "source_version": "5.3.28+dfsg1-0.8ubuntu3",
+              "homepage": "http://www.oracle.com/technetwork/database/database-technologies/berkeleydb/overview/index.html"
+            },
+            "dpkg_expected_md5": "73e00aa8871093e6d4f0e03a47d384ea",
+            "actual_md5": "73e00aa8871093e6d4f0e03a47d384ea",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libdb5.3:amd64",
+        "matched_package_version": "5.3.28+dfsg1-0.8ubuntu3"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libdeflate0.txt",
+      "bytes": 1483,
+      "sha256": "06b1e73b344fa5ad4c24a79547dd787623f3d118d681d6c9bd3fdc10a7070381",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libdeflate0/copyright",
+        "resolved_path": "/usr/share/doc/libdeflate0/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libdeflate0:amd64",
+              "version": "1.10-2",
+              "source_package": "libdeflate",
+              "source_version": "1.10-2",
+              "homepage": "https://github.com/ebiggers/libdeflate"
+            },
+            "dpkg_expected_md5": "8844ea61c1d53816c894e7a51e1c83f3",
+            "actual_md5": "8844ea61c1d53816c894e7a51e1c83f3",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libdeflate0:amd64",
+        "matched_package_version": "1.10-2"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libgssapi-krb5-2.txt",
+      "bytes": 61825,
+      "sha256": "4a2d321ab57260e8de4b67bde8cff76c07d28be69c2d8b22dfc2bfa42f5c41b9",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libgssapi-krb5-2/copyright",
+        "resolved_path": "/usr/share/doc/libgssapi-krb5-2/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libgssapi-krb5-2:amd64",
+              "version": "1.19.2-2ubuntu0.8",
+              "source_package": "krb5",
+              "source_version": "1.19.2-2ubuntu0.8",
+              "homepage": "http://web.mit.edu/kerberos/"
+            },
+            "dpkg_expected_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "actual_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "dpkg_payload_verified": true
+          },
+          {
+            "package": {
+              "package": "libgssapi-krb5-2:i386",
+              "version": "1.19.2-2ubuntu0.8",
+              "source_package": "krb5",
+              "source_version": "1.19.2-2ubuntu0.8",
+              "homepage": "http://web.mit.edu/kerberos/"
+            },
+            "dpkg_expected_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "actual_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libgssapi-krb5-2:amd64",
+        "matched_package_version": "1.19.2-2ubuntu0.8"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libjbig0.txt",
+      "bytes": 1849,
+      "sha256": "89ab20c324a191652e94598f2144a65442faed4f14f77bbd10516130ee20f05a",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libjbig0/copyright",
+        "resolved_path": "/usr/share/doc/libjbig0/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libjbig0:amd64",
+              "version": "2.1-3.1ubuntu0.22.04.1",
+              "source_package": "jbigkit",
+              "source_version": "2.1-3.1ubuntu0.22.04.1",
+              "homepage": "http://www.cl.cam.ac.uk/~mgk25/jbigkit/"
+            },
+            "dpkg_expected_md5": "a78e4d2489ff18028b35525830616f22",
+            "actual_md5": "a78e4d2489ff18028b35525830616f22",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libjbig0:amd64",
+        "matched_package_version": "2.1-3.1ubuntu0.22.04.1"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libk5crypto3.txt",
+      "bytes": 61825,
+      "sha256": "4a2d321ab57260e8de4b67bde8cff76c07d28be69c2d8b22dfc2bfa42f5c41b9",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libk5crypto3/copyright",
+        "resolved_path": "/usr/share/doc/libk5crypto3/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libk5crypto3:amd64",
+              "version": "1.19.2-2ubuntu0.8",
+              "source_package": "krb5",
+              "source_version": "1.19.2-2ubuntu0.8",
+              "homepage": "http://web.mit.edu/kerberos/"
+            },
+            "dpkg_expected_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "actual_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "dpkg_payload_verified": true
+          },
+          {
+            "package": {
+              "package": "libk5crypto3:i386",
+              "version": "1.19.2-2ubuntu0.8",
+              "source_package": "krb5",
+              "source_version": "1.19.2-2ubuntu0.8",
+              "homepage": "http://web.mit.edu/kerberos/"
+            },
+            "dpkg_expected_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "actual_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libk5crypto3:amd64",
+        "matched_package_version": "1.19.2-2ubuntu0.8"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libkeyutils1.txt",
+      "bytes": 2104,
+      "sha256": "6ab5c541723d8211cab7ebc1643d53aa51c4863c1c838e4625d797ece9472ee8",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libkeyutils1/copyright",
+        "resolved_path": "/usr/share/doc/libkeyutils1/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libkeyutils1:amd64",
+              "version": "1.6.1-2ubuntu3",
+              "source_package": "keyutils",
+              "source_version": "1.6.1-2ubuntu3",
+              "homepage": "https://people.redhat.com/~dhowells/keyutils/"
+            },
+            "dpkg_expected_md5": "accec5b37c1ffdc2c2effabd09d1b4d5",
+            "actual_md5": "accec5b37c1ffdc2c2effabd09d1b4d5",
+            "dpkg_payload_verified": true
+          },
+          {
+            "package": {
+              "package": "libkeyutils1:i386",
+              "version": "1.6.1-2ubuntu3",
+              "source_package": "keyutils",
+              "source_version": "1.6.1-2ubuntu3",
+              "homepage": "https://people.redhat.com/~dhowells/keyutils/"
+            },
+            "dpkg_expected_md5": "accec5b37c1ffdc2c2effabd09d1b4d5",
+            "actual_md5": "accec5b37c1ffdc2c2effabd09d1b4d5",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libkeyutils1:amd64",
+        "matched_package_version": "1.6.1-2ubuntu3"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libkrb5-3.txt",
+      "bytes": 61825,
+      "sha256": "4a2d321ab57260e8de4b67bde8cff76c07d28be69c2d8b22dfc2bfa42f5c41b9",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libkrb5-3/copyright",
+        "resolved_path": "/usr/share/doc/libkrb5-3/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libkrb5-3:amd64",
+              "version": "1.19.2-2ubuntu0.8",
+              "source_package": "krb5",
+              "source_version": "1.19.2-2ubuntu0.8",
+              "homepage": "http://web.mit.edu/kerberos/"
+            },
+            "dpkg_expected_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "actual_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "dpkg_payload_verified": true
+          },
+          {
+            "package": {
+              "package": "libkrb5-3:i386",
+              "version": "1.19.2-2ubuntu0.8",
+              "source_package": "krb5",
+              "source_version": "1.19.2-2ubuntu0.8",
+              "homepage": "http://web.mit.edu/kerberos/"
+            },
+            "dpkg_expected_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "actual_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libkrb5-3:amd64",
+        "matched_package_version": "1.19.2-2ubuntu0.8"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libkrb5support0.txt",
+      "bytes": 61825,
+      "sha256": "4a2d321ab57260e8de4b67bde8cff76c07d28be69c2d8b22dfc2bfa42f5c41b9",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libkrb5support0/copyright",
+        "resolved_path": "/usr/share/doc/libkrb5support0/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libkrb5support0:amd64",
+              "version": "1.19.2-2ubuntu0.8",
+              "source_package": "krb5",
+              "source_version": "1.19.2-2ubuntu0.8",
+              "homepage": "http://web.mit.edu/kerberos/"
+            },
+            "dpkg_expected_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "actual_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "dpkg_payload_verified": true
+          },
+          {
+            "package": {
+              "package": "libkrb5support0:i386",
+              "version": "1.19.2-2ubuntu0.8",
+              "source_package": "krb5",
+              "source_version": "1.19.2-2ubuntu0.8",
+              "homepage": "http://web.mit.edu/kerberos/"
+            },
+            "dpkg_expected_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "actual_md5": "55245d0f2c5677eb816754f87456a1e7",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libkrb5support0:amd64",
+        "matched_package_version": "1.19.2-2ubuntu0.8"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libmpdec3.txt",
+      "bytes": 2348,
+      "sha256": "be6dc763ac497102bbece71c0a83619ff538fd8e0ad43b8990c91bf323046228",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libmpdec3/copyright",
+        "resolved_path": "/usr/share/doc/libmpdec3/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libmpdec3:amd64",
+              "version": "2.5.1-2build2",
+              "source_package": "mpdecimal",
+              "source_version": "2.5.1-2build2",
+              "homepage": "https://www.bytereef.org/mpdecimal/index.html"
+            },
+            "dpkg_expected_md5": "5e707d974aaa885c602e00cb454fa401",
+            "actual_md5": "5e707d974aaa885c602e00cb454fa401",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libmpdec3:amd64",
+        "matched_package_version": "2.5.1-2build2"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libncursesw6.txt",
+      "bytes": 4670,
+      "sha256": "f0974fb41778e23c94111ff90da0546de8971f8270c58877283d372e6bd7f17e",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libncursesw6/copyright",
+        "resolved_path": "/usr/share/doc/libtinfo6/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libtinfo6:amd64",
+              "version": "6.3-2ubuntu0.3",
+              "source_package": "ncurses",
+              "source_version": "6.3-2ubuntu0.3",
+              "homepage": "https://invisible-island.net/ncurses/"
+            },
+            "dpkg_expected_md5": "6ff7d32947f8538e046380c0b1c959a5",
+            "actual_md5": "6ff7d32947f8538e046380c0b1c959a5",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libncursesw6:amd64",
+        "matched_package_version": "6.3-2ubuntu0.3"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libnsl2.txt",
+      "bytes": 13646,
+      "sha256": "7d9c79b73fd956319a90cd210441498b225e00960352c4c6d447436481bb0eec",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libnsl2/copyright",
+        "resolved_path": "/usr/share/doc/libnsl2/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libnsl2:amd64",
+              "version": "1.3.0-2build2",
+              "source_package": "libnsl",
+              "source_version": "1.3.0-2build2",
+              "homepage": "https://github.com/thkukuk/libnsl"
+            },
+            "dpkg_expected_md5": "42dce1c4da6a668b04a202ba2f800e5a",
+            "actual_md5": "42dce1c4da6a668b04a202ba2f800e5a",
+            "dpkg_payload_verified": true
+          },
+          {
+            "package": {
+              "package": "libnsl2:i386",
+              "version": "1.3.0-2build2",
+              "source_package": "libnsl",
+              "source_version": "1.3.0-2build2",
+              "homepage": "https://github.com/thkukuk/libnsl"
+            },
+            "dpkg_expected_md5": "42dce1c4da6a668b04a202ba2f800e5a",
+            "actual_md5": "42dce1c4da6a668b04a202ba2f800e5a",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libnsl2:amd64",
+        "matched_package_version": "1.3.0-2build2"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libpython3.10-minimal.txt",
+      "bytes": 49855,
+      "sha256": "f1cbf908e1daa8789b389fdcf17811ed36b675d736b39a103591399861350382",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libpython3.10-minimal/copyright",
+        "resolved_path": "/usr/share/doc/libpython3.10-minimal/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libpython3.10-minimal:amd64",
+              "version": "3.10.12-1~22.04.18",
+              "source_package": "python3.10",
+              "source_version": "3.10.12-1~22.04.18",
+              "homepage": ""
+            },
+            "dpkg_expected_md5": "d8c47e21fcd8f5a22f90828d568b0084",
+            "actual_md5": "d8c47e21fcd8f5a22f90828d568b0084",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libpython3.10-minimal:amd64",
+        "matched_package_version": "3.10.12-1~22.04.18"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libpython3.10-stdlib.txt",
+      "bytes": 49855,
+      "sha256": "f1cbf908e1daa8789b389fdcf17811ed36b675d736b39a103591399861350382",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libpython3.10-stdlib/copyright",
+        "resolved_path": "/usr/share/doc/libpython3.10-minimal/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libpython3.10-minimal:amd64",
+              "version": "3.10.12-1~22.04.18",
+              "source_package": "python3.10",
+              "source_version": "3.10.12-1~22.04.18",
+              "homepage": ""
+            },
+            "dpkg_expected_md5": "d8c47e21fcd8f5a22f90828d568b0084",
+            "actual_md5": "d8c47e21fcd8f5a22f90828d568b0084",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libpython3.10-stdlib:amd64",
+        "matched_package_version": "3.10.12-1~22.04.18"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libtirpc3.txt",
+      "bytes": 12942,
+      "sha256": "cffa5bbd80f3e38acf6ef3a0af73679b36c17f2eb3054c72d24b06b35eca1e03",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libtirpc3/copyright",
+        "resolved_path": "/usr/share/doc/libtirpc3/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libtirpc3:amd64",
+              "version": "1.3.2-2ubuntu0.1",
+              "source_package": "libtirpc",
+              "source_version": "1.3.2-2ubuntu0.1",
+              "homepage": "http://sourceforge.net/projects/libtirpc"
+            },
+            "dpkg_expected_md5": "270febbdb8203bdc13f542c2576cdade",
+            "actual_md5": "270febbdb8203bdc13f542c2576cdade",
+            "dpkg_payload_verified": true
+          },
+          {
+            "package": {
+              "package": "libtirpc3:i386",
+              "version": "1.3.2-2ubuntu0.1",
+              "source_package": "libtirpc",
+              "source_version": "1.3.2-2ubuntu0.1",
+              "homepage": "http://sourceforge.net/projects/libtirpc"
+            },
+            "dpkg_expected_md5": "270febbdb8203bdc13f542c2576cdade",
+            "actual_md5": "270febbdb8203bdc13f542c2576cdade",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libtirpc3:amd64",
+        "matched_package_version": "1.3.2-2ubuntu0.1"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libwebp7.txt",
+      "bytes": 2027,
+      "sha256": "01eb328708a9454061dd13931b19135e1c2c6251a7e6a6d0efc4b9bc436109c7",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libwebp7/copyright",
+        "resolved_path": "/usr/share/doc/libwebp7/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libwebp7:amd64",
+              "version": "1.2.2-2ubuntu0.22.04.2",
+              "source_package": "libwebp",
+              "source_version": "1.2.2-2ubuntu0.22.04.2",
+              "homepage": "https://developers.google.com/speed/webp/"
+            },
+            "dpkg_expected_md5": "017b22367852dc53155f01dcee4f3a85",
+            "actual_md5": "017b22367852dc53155f01dcee4f3a85",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libwebp7:amd64",
+        "matched_package_version": "1.2.2-2ubuntu0.22.04.2"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/libzstd1.txt",
+      "bytes": 5268,
+      "sha256": "8cf66791fbe72801cb1d701c832b7e395dad0000bb9699dc42df94b49d699e91",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/libzstd1/copyright",
+        "resolved_path": "/usr/share/doc/libzstd1/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "libzstd1:amd64",
+              "version": "1.4.8+dfsg-3build1",
+              "source_package": "libzstd",
+              "source_version": "1.4.8+dfsg-3build1",
+              "homepage": "https://github.com/facebook/zstd"
+            },
+            "dpkg_expected_md5": "b3701fa6dcd56be849cb1a70014fc167",
+            "actual_md5": "b3701fa6dcd56be849cb1a70014fc167",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "libzstd1:amd64",
+        "matched_package_version": "1.4.8+dfsg-3build1"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/poppler-data.txt",
+      "bytes": 39160,
+      "sha256": "b6641f2e367897bef0bcc438146cad733bc0dfe0166e2f105d44c5eff72a731e",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/poppler-data/copyright",
+        "resolved_path": "/usr/share/doc/poppler-data/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "poppler-data",
+              "version": "0.4.11-1",
+              "source_package": "poppler-data",
+              "source_version": "0.4.11-1",
+              "homepage": "https://poppler.freedesktop.org/"
+            },
+            "dpkg_expected_md5": "519e8f52716c7c9dc66697d621f91e56",
+            "actual_md5": "519e8f52716c7c9dc66697d621f91e56",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "poppler-data",
+        "matched_package_version": "0.4.11-1"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/python3-distutils.txt",
+      "bytes": 13992,
+      "sha256": "183860dfd4168e0608fb99fe53cef26088ba7275ce38a41e3c737d4217c0ccc1",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/python3-distutils/copyright",
+        "resolved_path": "/usr/share/doc/python3-distutils/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "python3-distutils",
+              "version": "3.10.8-1~22.04",
+              "source_package": "python3-stdlib-extensions",
+              "source_version": "3.10.8-1~22.04",
+              "homepage": ""
+            },
+            "dpkg_expected_md5": "f556582cd5efd917f9f0ab04ec33a3c1",
+            "actual_md5": "f556582cd5efd917f9f0ab04ec33a3c1",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "python3-distutils",
+        "matched_package_version": "3.10.8-1~22.04"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/python3-gdbm.txt",
+      "bytes": 13992,
+      "sha256": "183860dfd4168e0608fb99fe53cef26088ba7275ce38a41e3c737d4217c0ccc1",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/python3-gdbm/copyright",
+        "resolved_path": "/usr/share/doc/python3-gdbm/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "python3-gdbm:amd64",
+              "version": "3.10.8-1~22.04",
+              "source_package": "python3-stdlib-extensions",
+              "source_version": "3.10.8-1~22.04",
+              "homepage": ""
+            },
+            "dpkg_expected_md5": "f556582cd5efd917f9f0ab04ec33a3c1",
+            "actual_md5": "f556582cd5efd917f9f0ab04ec33a3c1",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "python3-gdbm:amd64",
+        "matched_package_version": "3.10.8-1~22.04"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/python3-lib2to3.txt",
+      "bytes": 13992,
+      "sha256": "183860dfd4168e0608fb99fe53cef26088ba7275ce38a41e3c737d4217c0ccc1",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/python3-lib2to3/copyright",
+        "resolved_path": "/usr/share/doc/python3-lib2to3/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "python3-lib2to3",
+              "version": "3.10.8-1~22.04",
+              "source_package": "python3-stdlib-extensions",
+              "source_version": "3.10.8-1~22.04",
+              "homepage": ""
+            },
+            "dpkg_expected_md5": "f556582cd5efd917f9f0ab04ec33a3c1",
+            "actual_md5": "f556582cd5efd917f9f0ab04ec33a3c1",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "python3-lib2to3",
+        "matched_package_version": "3.10.8-1~22.04"
+      }
+    },
+    {
+      "path": "third_party/supplemental-notices/python3.10-minimal.txt",
+      "bytes": 49855,
+      "sha256": "f1cbf908e1daa8789b389fdcf17811ed36b675d736b39a103591399861350382",
+      "source": {
+        "kind": "verified-dpkg-copyright",
+        "path": "/usr/share/doc/python3.10-minimal/copyright",
+        "resolved_path": "/usr/share/doc/python3.10-minimal/copyright",
+        "owners": [
+          {
+            "package": {
+              "package": "python3.10-minimal",
+              "version": "3.10.12-1~22.04.18",
+              "source_package": "python3.10",
+              "source_version": "3.10.12-1~22.04.18",
+              "homepage": ""
+            },
+            "dpkg_expected_md5": "d8c47e21fcd8f5a22f90828d568b0084",
+            "actual_md5": "d8c47e21fcd8f5a22f90828d568b0084",
+            "dpkg_payload_verified": true
+          }
+        ],
+        "matched_bundled_package": "python3.10-minimal",
+        "matched_package_version": "3.10.12-1~22.04.18"
+      }
+    },
+    {
+      "path": "third_party/node-dependency-licenses/SHASUMS256-v24.14.0.txt",
+      "bytes": 2967,
+      "sha256": "e340782342ed6265ce9e14e9caa81e2260a9b4415bbd2c8ad20cea0e59617d65",
+      "source": {
+        "kind": "official-upstream-release-checksum-list",
+        "url": "https://nodejs.org/dist/v24.14.0/SHASUMS256.txt"
+      }
+    },
+    {
+      "path": "third_party/node-dependency-licenses/config-v24.14.0.gypi",
+      "bytes": 19231,
+      "sha256": "cc1abfe7dd2c67110e242b55eeabd8f2177a728f6513dd828e08e5f3594a3d66",
+      "source": {
+        "kind": "verified-official-release-member",
+        "url": "https://nodejs.org/dist/v24.14.0/node-v24.14.0-linux-x64.tar.xz",
+        "archive_sha256": "41cd79bb7877c81605a9e68ec4c91547774f46a40c67a17e34d7179ef11729df",
+        "member": "node-v24.14.0-linux-x64/include/node/config.gypi"
+      }
+    },
+    {
+      "path": "third_party/node-dependency-licenses/deps-nbytes-LICENSE",
+      "bytes": 1064,
+      "sha256": "782ab5b8ae1540c1a2b102fdd00990ed268d4a3a98e90ad7fe724b489d7bb0f2",
+      "source": {
+        "kind": "official-pinned-node-source",
+        "url": "https://raw.githubusercontent.com/nodejs/node/v24.14.0/deps/nbytes/LICENSE",
+        "node_tag": "v24.14.0"
+      }
+    },
+    {
+      "path": "third_party/node-dependency-licenses/deps-nbytes-README.md",
+      "bytes": 240,
+      "sha256": "2b8bc2cca5b61333567dacb3056533e2c644b40e63f82d3c286f4df1b4a9c98a",
+      "source": {
+        "kind": "official-pinned-node-source",
+        "url": "https://raw.githubusercontent.com/nodejs/node/v24.14.0/deps/nbytes/README.md",
+        "node_tag": "v24.14.0"
+      }
+    },
+    {
+      "path": "third_party/node-dependency-licenses/deps-ncrypto-README.md",
+      "bytes": 283,
+      "sha256": "eac7f233d33572e73765164256a7c92c207099722d59bd32c0e5e3a82b0ce292",
+      "source": {
+        "kind": "official-pinned-node-source",
+        "url": "https://raw.githubusercontent.com/nodejs/node/v24.14.0/deps/ncrypto/README.md",
+        "node_tag": "v24.14.0"
+      }
+    },
+    {
+      "path": "third_party/node-dependency-licenses/sqlite-PUBLIC-DOMAIN.txt",
+      "bytes": 1755,
+      "sha256": "7e910d899ee0fe4936d327145e76edd31ca3dbc88ecb004e040536370d0d6063",
+      "source": {
+        "kind": "verbatim-upstream-source-notice-excerpt",
+        "url": "https://raw.githubusercontent.com/nodejs/node/v24.14.0/deps/sqlite/sqlite3.c",
+        "source_sha256": "f7d8b32e48849494f13851e13e659d70ef372c5d207b84bc71c05d1e62716305",
+        "source_line_ranges": [
+          [
+            1,
+            24
+          ],
+          [
+            32,
+            42
+          ]
+        ],
+        "version": "3.51.2"
+      }
+    }
+  ]
+}

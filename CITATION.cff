@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use Paperbench Research in research, please cite this software and the upstream projects actually used; see ACKNOWLEDGMENTS.md."
+type: software
+title: "Paperbench Research"
+authors:
+  - family-names: "last-dive"
+repository-code: "https://github.com/last-dive/paper-benchmark-git"
+url: "https://github.com/last-dive/paper-benchmark-git"
+version: "2.5.0"
+date-released: "2026-09-12"
+license: "PolyForm-Noncommercial-1.0.0"
+abstract: "Local paper review workbench with fixed criteria, repeated scoring, MinerU PDF-to-Markdown integration and offline reports."
+keywords:
+  - paper review
+  - reproducible evaluation
+  - offline reports
+  - MinerU
