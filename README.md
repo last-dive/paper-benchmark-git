@@ -40,7 +40,9 @@ python3 configure_local.py
 
 ## 使用 AppImage
 
-本地交付副本位于 `dist/Paperbench-Research-2.5.0-x86_64.AppImage`。`dist/` 保留在本机并被 Git 忽略；通过 Git 克隆不会获得此文件，公开分发应使用 GitHub Release 附件。
+从 [v2.5.0 发布页](https://github.com/last-dive/paper-benchmark-git/releases/tag/v2.5.0) 下载 AppImage、打包源码、第三方许可文件和 SHA-256 校验清单。当前仓库为私有，需要登录获授权的 GitHub 账号。
+
+本地交付副本位于 `dist/Paperbench-Research-2.5.0-x86_64.AppImage`。`dist/` 保留在本机并被 Git 忽略；通过 Git 克隆不会获得此文件。将发布页下载的 AppImage 放入 `dist/` 后，可使用下方命令启动。
 
 在仓库根目录运行：
 
