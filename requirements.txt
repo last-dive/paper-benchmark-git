@@ -1,0 +1,5 @@
+# Source application and tests use the Python standard library only (Python 3.10+).
+# No pip installation is required.
+# System tools: Node.js 20+, poppler-utils (pdfinfo, pdftotext).
+# AppImage builds additionally need Ubuntu 22.04 x86_64 and squashfs-tools.
+# MinerU runs in an independently installed host Conda environment; see README.md.

@@ -1,0 +1,34 @@
+# Credentials and local research data
+.private/
+.env
+.env.*
+!.env.example
+model_config.json
+output/
+backups/
+validation/
+local-snapshot/
+*.pdf
+*.log
+
+# Distribution files are kept locally and uploaded as Release assets
+dist/
+*.AppImage
+appimage/Paperbench.AppDir/
+appimage/delivery/
+appimage/build-config.json
+appimage/bundle-manifest.json
+appimage/source-manifest.json
+appimage/smoke-results.json
+appimage/payload.squashfs
+
+# Generated development files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.pytest_cache/
+.DS_Store
+*.swp
+*.tmp

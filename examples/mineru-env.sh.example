@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Example only. Edit the Conda path/environment for your host before using.
+# The current v2.5.0 bridge calls /home/xx/DS/MinerU/env.sh.
+set -euo pipefail
+source /path/to/conda/etc/profile.d/conda.sh
+conda activate mineru34
+export CUDA_DEVICE_ORDER=PCI_BUS_ID
+# Preserve the CUDA ordinal already verified by the application.
+export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
+export MINERU_MODEL_SOURCE=local
+unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY
+exec "$@"

@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "applicationVersion": "2.5.0",
+  "preservedAppImageSHA256": "3af2201381c87a18e46eba301a11e4ec3f5ec942877a7f8ca8746d9f3a2df94b",
+  "appImageRuntimeSHA256": "1cc49bcf1e2ccd593c379adb17c9f85a36d619088296504de95b1d06215aebbf",
+  "appImageRuntimeReportedCommit": "75849dc",
+  "appImageRuntimeResolvedCommit": "75849dce7cc37e4319b633df1f116ca895c71a12",
+  "bundledNoticeCount": 28,
+  "commonLicenseCount": 13,
+  "verification": "Bundled notice bytes match both release/v2.5.0/bundle-manifest.json and the preserved AppImage members. The AppImage runtime prefix matches appimage/vendor/runtime-x86_64. Common-license files are supplemental host copies; upstream runtime license was retrieved at its self-reported commit.",
+  "scope": "Notice inventory and provenance only; no claim of complete license or corresponding-source compliance.",
+  "files": [
+    {
+      "path": "third_party/bundled-notices/libbz2-1.0.txt",
+      "bytes": 2228,
+      "sha256": "832ed535ff3c3d025a8d2348eb1b697b89addcf2eaadbc17650262040b9145e2",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libbz2-1.0.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libcrypt1.txt",
+      "bytes": 6010,
+      "sha256": "5a5e7ca0e9f3f9679977e3a3e9ede45ad92885a3297ea78e766979f9866c5a16",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libcrypt1.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libexpat1.txt",
+      "bytes": 1756,
+      "sha256": "60919fe1a156395ff14511bb6ff79756c50ade2fff59ac60c9bae1d8a7fe6292",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libexpat1.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libffi8.txt",
+      "bytes": 3440,
+      "sha256": "7258c8acc378030d8dbe1fcdf394e915769fa31dcbaf3d2991d9a79891f3bcdc",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libffi8.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libfontconfig1.txt",
+      "bytes": 1301,
+      "sha256": "b215a61cdd3e62b5b17cc28b1852c78acb3dd38be0fb30706f7efc050dba91db",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libfontconfig1.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libfreetype6.txt",
+      "bytes": 25162,
+      "sha256": "992b869abf2c114288dafb51c37f19c0afc3455477b9d589371d45ad214a8b07",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libfreetype6.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libgcc-s1.txt",
+      "bytes": 68194,
+      "sha256": "da8191658b3452ce9caf31638ba61dab31a38c619fa39df119812e050f592fd3",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libgcc-s1.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libgdbm-compat4.txt",
+      "bytes": 2701,
+      "sha256": "8bea8cf2f94cd8b37a0b8b3a2b974122b9194c1165e6ad508e366c74679e8817",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libgdbm-compat4.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libgdbm6.txt",
+      "bytes": 2701,
+      "sha256": "8bea8cf2f94cd8b37a0b8b3a2b974122b9194c1165e6ad508e366c74679e8817",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libgdbm6.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libjpeg-turbo8.txt",
+      "bytes": 6101,
+      "sha256": "193468d9eb043a180f6f9e3386f7205104908dcb8525ad39c8236990dfd452ef",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libjpeg-turbo8.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/liblcms2-2.txt",
+      "bytes": 3049,
+      "sha256": "2770aa1078b7089a4ea61b6cc5417f7f08740944b23d4374af46d6f899c9da77",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/liblcms2-2.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/liblzma5.txt",
+      "bytes": 15465,
+      "sha256": "a2dc8fac0f496e1c58aff67018cf0c6b88336316afa5642f9335b71642e28aa8",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/liblzma5.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libnspr4.txt",
+      "bytes": 331,
+      "sha256": "3c4fcc131809b2b6993513bfe4cf6f1ede391ec84f1d5ceca78fb75537b22452",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libnspr4.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libnss3.txt",
+      "bytes": 8087,
+      "sha256": "d91076658d63a9486e031cedd9dec97d99cfb13ddc3296ac7b22552dbb1ea503",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libnss3.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libopenjp2-7.txt",
+      "bytes": 44774,
+      "sha256": "e10d65b1ada3f938c15992d9912fcda0b9cfd15e5715d8d2ff6f20a150b781de",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libopenjp2-7.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libpng16-16.txt",
+      "bytes": 13341,
+      "sha256": "b2d88c45221e2016a5a0bb98406b45faf911f1aff87242eec12af05abae1de0a",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libpng16-16.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libpoppler118.txt",
+      "bytes": 12722,
+      "sha256": "dad79f8e4b904808e65be744e3cd23303f050573c634a697ccb8696ef291eb63",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libpoppler118.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libreadline8.txt",
+      "bytes": 2747,
+      "sha256": "3a3174c995a17c797069650c273120b145bc26157eed25ad6bd1be18a25d1096",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libreadline8.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libsqlite3-0.txt",
+      "bytes": 1833,
+      "sha256": "78e9df8f8153c91c762ec970b82d224ac4d30f05aa7773e7e17e268141e53873",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libsqlite3-0.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libssl3.txt",
+      "bytes": 2543,
+      "sha256": "6a7da622fe0637a334d2a8fc470852d2ffb77d9a2b2f930f854e32a41ad6ef35",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libssl3.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libstdc++6.txt",
+      "bytes": 68194,
+      "sha256": "da8191658b3452ce9caf31638ba61dab31a38c619fa39df119812e050f592fd3",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libstdc++6.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libtiff5.txt",
+      "bytes": 1837,
+      "sha256": "76d76328df19f51ad6b48e925cc2fd8aeaea7d2f1ce905983753fc855466de8b",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libtiff5.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libtinfo6.txt",
+      "bytes": 4670,
+      "sha256": "f0974fb41778e23c94111ff90da0546de8971f8270c58877283d372e6bd7f17e",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libtinfo6.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/libuuid1.txt",
+      "bytes": 23045,
+      "sha256": "2c447817698777e3b2365a5afe2a58ececb85367dfdf0ea2c0df49add90e93eb",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/libuuid1.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/node.txt",
+      "bytes": 156926,
+      "sha256": "4573185d56580da2b890ba34a85a409257640f1c5632eade4300137266194d18",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/node.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/poppler-utils.txt",
+      "bytes": 12722,
+      "sha256": "dad79f8e4b904808e65be744e3cd23303f050573c634a697ccb8696ef291eb63",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/poppler-utils.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/python3.10.txt",
+      "bytes": 49855,
+      "sha256": "f1cbf908e1daa8789b389fdcf17811ed36b675d736b39a103591399861350382",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/python3.10.txt"
+      }
+    },
+    {
+      "path": "third_party/bundled-notices/zlib1g.txt",
+      "bytes": 2920,
+      "sha256": "d77204eee882807240f6351c4f5ae2a4bcdb5b773ff77d10647b9b66b826b2fb",
+      "source": {
+        "kind": "verified-appimage-member",
+        "path": "usr/share/licenses/zlib1g.txt"
+      }
+    },
+    {
+      "path": "third_party/common-licenses/Apache-2.0",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/Apache-2.0",
+        "resolvedFileName": "Apache-2.0",
+        "referencedBy": [
+          "libpng16-16.txt",
+          "libpoppler118.txt",
+          "libssl3.txt",
+          "poppler-utils.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/common-licenses/Artistic",
+      "bytes": 6111,
+      "sha256": "b7fd9b73ea99602016a326e0b62e6646060d18febdd065ceca8bb482208c3d88",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/Artistic",
+        "resolvedFileName": "Artistic",
+        "referencedBy": [
+          "libgcc-s1.txt",
+          "libssl3.txt",
+          "libstdc++6.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/common-licenses/GFDL",
+      "bytes": 22962,
+      "sha256": "4748f03ed2dbcc14cde6ebc30799899c403e356a7465dc30fcf2b80c45fc0059",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/GFDL",
+        "resolvedFileName": "GFDL-1.3",
+        "referencedBy": [
+          "libreadline8.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/common-licenses/GFDL-1.2",
+      "bytes": 20431,
+      "sha256": "56976e64523fa1e68db4e6f464f5b2cb89d7d08f54b1d012e317b8db286b3faf",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/GFDL-1.2",
+        "resolvedFileName": "GFDL-1.2",
+        "referencedBy": [
+          "libgcc-s1.txt",
+          "libstdc++6.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/common-licenses/GPL",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/GPL",
+        "resolvedFileName": "GPL-3",
+        "referencedBy": [
+          "libffi8.txt",
+          "libgcc-s1.txt",
+          "libstdc++6.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/common-licenses/GPL-1",
+      "bytes": 12632,
+      "sha256": "d77d235e41d54594865151f4751e835c5a82322b0e87ace266567c3391a4b912",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/GPL-1",
+        "resolvedFileName": "GPL-1",
+        "referencedBy": [
+          "libssl3.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/common-licenses/GPL-2",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/GPL-2",
+        "resolvedFileName": "GPL-2",
+        "referencedBy": [
+          "libbz2-1.0.txt",
+          "libfreetype6.txt",
+          "libgcc-s1.txt",
+          "libgdbm-compat4.txt",
+          "libgdbm6.txt",
+          "liblcms2-2.txt",
+          "liblzma5.txt",
+          "libpng16-16.txt",
+          "libpoppler118.txt",
+          "libsqlite3-0.txt",
+          "libstdc++6.txt",
+          "libuuid1.txt",
+          "poppler-utils.txt",
+          "python3.10.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/common-licenses/GPL-3",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/GPL-3",
+        "resolvedFileName": "GPL-3",
+        "referencedBy": [
+          "libfreetype6.txt",
+          "libgcc-s1.txt",
+          "libgdbm-compat4.txt",
+          "libgdbm6.txt",
+          "liblcms2-2.txt",
+          "liblzma5.txt",
+          "libpoppler118.txt",
+          "libreadline8.txt",
+          "libstdc++6.txt",
+          "libuuid1.txt",
+          "poppler-utils.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/common-licenses/LGPL",
+      "bytes": 7651,
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/LGPL",
+        "resolvedFileName": "LGPL-3",
+        "referencedBy": [
+          "libgcc-s1.txt",
+          "libstdc++6.txt",
+          "libuuid1.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/common-licenses/LGPL-2",
+      "bytes": 25383,
+      "sha256": "b7993225104d90ddd8024fd838faf300bea5e83d91203eab98e29512acebd69c",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/LGPL-2",
+        "resolvedFileName": "LGPL-2",
+        "referencedBy": [
+          "liblzma5.txt",
+          "libuuid1.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/common-licenses/LGPL-2.1",
+      "bytes": 26530,
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/LGPL-2.1",
+        "resolvedFileName": "LGPL-2.1",
+        "referencedBy": [
+          "libjpeg-turbo8.txt",
+          "liblzma5.txt",
+          "libuuid1.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/common-licenses/LGPL-3",
+      "bytes": 7651,
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/LGPL-3",
+        "resolvedFileName": "LGPL-3",
+        "referencedBy": [
+          "libuuid1.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/common-licenses/MPL-2.0",
+      "bytes": 16726,
+      "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85",
+      "source": {
+        "kind": "host-common-license",
+        "path": "/usr/share/common-licenses/MPL-2.0",
+        "resolvedFileName": "MPL-2.0",
+        "referencedBy": [
+          "libnspr4.txt",
+          "libnss3.txt"
+        ]
+      }
+    },
+    {
+      "path": "third_party/appimage-runtime/LICENSE",
+      "bytes": 1678,
+      "sha256": "aa154fc9070614bbe7921f89db11efd1dba7a1f3a41685958110e2230f9c0ca1",
+      "source": {
+        "kind": "upstream-at-runtime-reported-commit",
+        "url": "https://raw.githubusercontent.com/AppImage/type2-runtime/75849dce7cc37e4319b633df1f116ca895c71a12/LICENSE"
+      }
+    }
+  ]
+}

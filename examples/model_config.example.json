@@ -1,0 +1,4 @@
+{
+  "endpoint": "https://open.bigmodel.cn/api/coding/paas/v4/chat/completions",
+  "api_key": "REPLACE_WITH_YOUR_API_KEY"
+}

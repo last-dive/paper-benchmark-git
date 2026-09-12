@@ -1,0 +1,9 @@
+{
+  "baselineVersion": "2.4.1",
+  "parser": "PB-PARSER-2.4",
+  "files": {
+    "style.css": "7242f7d81be34603ec496b5872ab3fa6bb5a9e2edc42aaed6ed43437971a5ad0"
+  },
+  "baselineCoreHash": "180a68e17b7a60d1f7a0337497a530d80d06b3acddef27a22a9a6b2028492cbd",
+  "coreExtensionBlock": "MINERU_ARCHIVE_METADATA"
+}

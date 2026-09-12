@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light"><meta name="description" content="本地论文深度评审工作台：五个维度、二十个固定检查项、主张审计与可复核的多轮评分。">
+<title>Paperbench Research · 论文深度评审</title>
+<style>/* INLINE_STYLE */</style>
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="brand-icon" aria-hidden="true">Pb</span><div><strong>Paperbench Research</strong><span>EVIDENCE REVIEW WORKBENCH · 论文深度评审</span></div><span class="local-tag">LOCAL EDITION<br>本地文件 · v2.5.0</span></div><div class="actions"><button id="recoveryBtn" hidden>导出未加载记录</button><button id="demoBtn" class="quiet">载入演示</button><button id="exportJSON">导出 JSON</button><button id="exportCSV">导出调用 CSV</button><button id="importBtn">导入备份</button><input id="importFile" type="file" accept=".json,application/json" hidden></div></header>
+<div id="notice" role="status" aria-live="polite" hidden></div>
+<div id="storageStatus" class="storage-line">正在恢复本地工作区…</div>
+<main>
+<section class="workflow-guide workspace-intake card" aria-label="设置步骤">
+<div class="workflow-heading"><div><span class="eyebrow">RESEARCH WORKSPACE / 研究工作台</span><h2>四步完成论文评审</h2></div><span class="workflow-caption">从原文证据，到可复核的评审报告</span></div>
+<div class="setup-steps"><article><span class="step-number" aria-hidden="true">01</span><b>保存评审设置</b><p id="stepConfig" role="status"></p></article><article><span class="step-number" aria-hidden="true">02</span><b>准备PDF或正文</b><p id="stepInput" role="status"></p></article><article><span class="step-number" aria-hidden="true">03</span><b>检查输出路径</b><p id="stepOutput" role="status"></p></article><article><span class="step-number" aria-hidden="true">04</span><b>开始评分与保存</b><p id="stepRun" role="status"></p></article></div>
+<div id="serviceGuide" class="service-guide"><strong>当前未连接本机服务：PDF 原件上传和报告写入尚不可用</strong><p>在终端运行下方命令，然后打开启动器显示的本机地址，重新选择原 PDF。请从本机地址打开，才能发送原始PDF和保存报告。</p><code>python3 /home/xx/chatgpt/paper_benchmark_codex/start_local.py</code><p><a href="http://127.0.0.1:8787/" target="_blank" rel="noopener">打开默认本机工作台</a>（若更换端口，以终端显示的地址为准）</p></div>
+<div class="actions"><button id="reconnectWorkspaceBtn">重新连接本机工具</button><button id="checkSetupBtn" class="primary">检查全部设置（不调用模型）</button></div><p id="workflowStatus" class="setup-feedback" role="status" aria-live="polite"></p>
+</section>
+<details id="settings" class="card settings workflow-api" open><summary><span><span class="section-index">01</span> <b>API 与评审设置</b></span><span id="configSummary" class="muted">固定检查项 · 主张与证据审计</span></summary><div class="settings-body">
+<p class="callout review-guidance">每份评审保留原文依据与评分理由。请区分“五维完整”“部分结果”和“失败”；保存报告后仍可继续查看待处理问题。</p><div class="config-grid"><label>材料发送方式<select id="inputMode"><option value="pdf">PDF原件 + 引文定位索引（推荐）</option><option value="text">只发送提取/编辑文本</option></select></label><label>API 模式<select id="apiMode"><option value="default">默认 GLM · 本机凭据</option><option value="custom">自定义 API · 自己的 Key</option></select></label>
+<label class="wide">接口地址<input id="endpoint" type="url" placeholder="https://api.example.com/v1" autocomplete="off"></label>
+<label>模型名<input id="model" placeholder="供应商提供的模型名" autocomplete="off"></label>
+<label>API Key（仅当前会话）<input id="apiKey" type="password" placeholder="本地代理可留空" autocomplete="off" spellcheck="false"></label>
+<label>论文类型<select id="paperType"><option value="engineering">工程方法</option><option value="simulation">数值仿真</option><option value="experimental">实验研究</option><option value="theory">理论研究</option></select></label>
+<label>每篇复评轮数<input id="repeats" type="number" min="1" max="30" step="1"></label>
+<label>温度 temperature<input id="temperature" type="number" min="0" max="2" step="0.1"></label>
+<label>并发数<input id="concurrency" type="number" min="1" max="8" step="1"></label>
+<label>思考模式 thinking<select id="thinking"><option value="enabled">启用 · enabled</option><option value="disabled">关闭 · disabled</option><option value="omit">不发送此参数</option></select></label>
+<label>推理强度 reasoning_effort<select id="reasoningEffort"><option value="low">低 · low</option><option value="high">高 · high</option><option value="max">最高 · max</option><option value="omit">不发送此参数</option></select></label>
+</div>
+<details class="advanced"><summary>更多参数与固定校准说明</summary><div class="config-grid">
+<label>单次超时（秒）<input id="timeout" type="number" min="1" max="900"></label><label>额外重试次数<input id="retries" type="number" min="0" max="5"></label><label>最大输出 tokens<input id="maxTokens" type="number" min="16" max="65536"></label><label>top_p<input id="topP" type="number" min="0" max="1" step="0.05"></label><label>seed（选填）<input id="seed" type="number" placeholder="留空：不发送"></label><label>每篇字符上限<input id="maxChars" type="number" min="1000" max="2000000"></label>
+<label class="wide">固定领域说明 / 已核验的校准事实<textarea id="anchors" rows="3" placeholder="选填。填写所有论文共用的领域术语、证据要求；不要填目标论文的期望分数。修改后生成新协议。"></textarea></label></div></details>
+<div class="config-footer"><div><label class="check"><input id="responseJson" type="checkbox">发送 JSON mode 参数</label><label class="check"><input id="sendDoSample" type="checkbox">发送 do_sample 参数</label><label class="check"><input id="doSample" type="checkbox">启用采样 do_sample</label><label class="check session-key-legacy" hidden><input id="rememberKey" type="checkbox">在本机记住 Key（明文）</label></div><div class="actions"><button id="glmPresetBtn" class="quiet">恢复GLM默认</button><button id="localProfileBtn" class="quiet">使用本机默认配置</button><button id="testBtn">测试连接</button><button id="saveConfigBtn" class="primary">完成第1步：保存配置</button></div></div>
+<p class="hint" id="materialModeGuide">本地自定义 API（127.0.0.1、localhost、::1）：PDF 原件先在本机由 GPU / MinerU 转成 Markdown，再交给文本模型评分；原件、Markdown 和图片资源保留供离线查看。模型不会读取 Markdown 的图片链接，这不是视觉直读。云端 API 保持所选的 PDF 原件或文本方式。测试连接只检查短文本请求。</p>
+<p id="lowRepeatHint" class="hint">1–2 轮仅供链路检查；稳定性需更多独立复评。</p><p id="credentialStatus" class="hint credential-status" role="status" aria-live="polite">当前尚未载入密钥，可输入 API Key 或使用本机默认配置。</p>
+<p class="hint protocol-note">五个评审维度包含二十个固定检查项，并记录论文主张、支持证据与评审局限。开始批次后冻结量表和生成参数；全文只发送到所配置的接口。</p>
+</div></details>
+<section class="workspace-intake" aria-label="材料输入与结果输出">
+<section class="card input-panel"><div class="section-head"><div><span class="eyebrow">02 / INPUT</span><h2>添加论文或整个目录</h2></div></div>
+<div id="dropZone" class="drop-zone" role="region" aria-label="拖入论文文件或目录" tabindex="0"><svg class="upload-mark" viewBox="0 0 40 44" fill="none" aria-hidden="true"><path d="M8 2h16l9 9v30H8z" stroke="currentColor" stroke-width="1.5"/><path d="M24 2v10h9M14 30h13M20 25V15m-5 5 5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>拖入 PDF、TXT、Markdown 或目录</strong><p>目录会递归读取；浏览器文件只保留相对路径，不虚构原绝对路径。</p><div class="actions"><label class="file-choice">选择文件<input id="paperFiles" type="file" multiple accept=".txt,.md,.text,.pdf,text/plain,application/pdf"></label><label class="file-choice">选择目录<input id="folderFiles" type="file" multiple webkitdirectory directory></label></div></div>
+<label>本机绝对文件或目录路径（每行一个）<textarea id="inputPaths" rows="3" placeholder="从本机服务读取默认输入目录，也可粘贴真实绝对路径"></textarea></label>
+<div class="actions"><label class="check"><input id="recursiveInput" type="checkbox" checked>递归读取子目录</label><button id="pickInputFiles">本机选择文件</button><button id="pickInputFolder">本机选择目录</button><button id="readPathsBtn" class="primary">读取路径</button></div>
+<p id="workspaceStatus" class="hint" role="status"></p><p id="inputStatus" class="hint" role="status">本地自定义 API 先将 PDF 原件通过 GPU / MinerU 转为 Markdown；云端 PDF 模式发送原件与引文定位索引，TXT 直接发送文本。模型引用编号后由本地核验；“已解析”不等于“五维完整评分”。</p>
+</section>
+<section class="card output-panel"><div class="section-head"><div><span class="eyebrow">03 / OUTPUT</span><h2>保存可离线阅读的报告</h2></div></div>
+<label>输出目录的绝对路径<input id="outputPath" type="text" autocomplete="off" placeholder="由本机服务提供默认目录，可自行修改"></label>
+<div class="actions"><button id="checkOutputBtn" class="primary">检查并保存路径</button><button id="pickOutputFolder">本机选择输出目录</button><label class="check"><input id="autoSaveReport" type="checkbox" checked>评分结束后自动保存报告</label></div>
+<p class="hint">仅本机模式可自动保存。开始评分前检查输出目录；每次保存创建独立目录，包含离线 HTML、JSON、CSV 和已有源文件。</p>
+<button id="saveReportBtn" class="primary">保存当前批报告</button><div id="outputStatus" class="output-status" role="status">尚未保存报告。保存失败可单独重试，不必重新评分。</div>
+</section></section>
+<div class="workspace">
+<aside class="card library"><div class="section-head"><div><span class="eyebrow">SOURCE MATERIALS / 论文库</span><h2>论文与版本 <span id="paperCount" class="count">0</span></h2></div><button id="newPaper" title="新增论文">＋ 新建</button></div>
+<p class="hint">本地自定义 API 使用 PDF 原件的 MinerU 转换结果，编辑框文字不参与该模式。云端 PDF 模式发送原件与编辑文字生成的引文索引。TXT、MD 使用编辑框全文。</p>
+<div id="paperList" class="paper-list"></div>
+<form id="paperForm"><label>论文标题<input id="paperTitle" required maxlength="200" placeholder="如：多目标航迹估计"></label><div class="two-col"><label>版本标记<input id="paperVersion" maxlength="60" placeholder="v10 / published"></label><label>论文系列<input id="paperGroup" maxlength="100" placeholder="同一论文用同一系列"></label></div><div class="two-col"><label>角色<select id="paperKind"><option value="draft">待评版本</option><option value="reference">对标文献</option></select></label><label>主要改动<select id="paperChange"><option value="other">其他 / 未标注</option><option value="structure">结构整理</option><option value="style">语言风格</option><option value="evidence">方法 / 证据增强</option></select></label></div><label>论文文字 / 引文定位索引来源 <span id="charCount" class="muted">0 字符</span><textarea id="paperText" rows="10" placeholder="粘贴正文，保留章节、公式说明、实验表格和图注。不要只放摘要。"></textarea></label><p id="inputWarning" class="hint">标题、版本、角色、改动标记仅供本地展示。</p><div class="actions"><button type="submit" class="primary" id="savePaper">保存论文</button><button type="button" id="deletePaper" class="danger" disabled>移除条目</button></div></form>
+</aside>
+<section class="results-area">
+<div class="card run-panel"><div class="run-heading"><div><span class="eyebrow">04 / REVIEW PROTOCOL</span><h1>逐项审阅论文的主张与证据</h1><p class="run-intro">固定检查项记录判断依据，多轮评审呈现评分波动。</p></div><span id="batchBadge" class="pill">尚未评分</span></div><div class="protocol-strip" aria-label="深度评审组成"><span><b>05</b> 评审维度</span><span><b>20</b> 固定检查项</span><span><b>↳</b> 主张审计与证据定位</span></div><div class="batch-controls"><label>历史批次<select id="batchSelect"><option value="">新建批次</option></select></label><label>新批次名称<input id="batchName" maxlength="150" placeholder="如：航迹估计 · 第一次评审"></label><button id="runBtn" class="primary">第4步：开始新批次</button><button id="resumeBtn" hidden>补跑未完成</button><button id="pauseBtn" class="danger" hidden>暂停</button></div><div class="actions"><button id="recoverLocalBtn" hidden>本地恢复失败结果（不调用模型）</button></div><section id="mineruProgress" class="batch-status-detail" aria-label="MinerU 材料准备" hidden><strong>GPU / MinerU · PDF → Markdown</strong><p id="mineruProgressText" role="status" aria-live="polite"></p><p class="hint">全部 PDF 转换成功后才开始评分。引用按 Markdown 字符位置核验，索引页号不代表原PDF页码。Markdown 和图片保留供离线查看；图片文件不会发送给文本评分模型。</p><button id="cancelMineruBtn" class="danger" type="button">取消转换</button></section><div id="runProgress" class="run-progress"><div class="track"><div id="progressBar"></div></div><span id="progressText">论文库中的所有论文将按轮次独立评分，排序在本地计算。</span></div><div id="batchStatusDetail" class="batch-status-detail" role="status" aria-live="polite" hidden></div><div id="batchMeta" class="hint"></div><div id="executionAudit"></div></div>
+<nav class="tabs" aria-label="结果视图"><button class="active" data-tab="overview">评分总览</button><button data-tab="compare">版本对比</button><button data-tab="audit">评审理由与记录</button><button data-tab="history">稳定性复核</button><button data-tab="method">评分方法</button></nav>
+<div id="overview" class="tab-panel"></div><div id="compare" class="tab-panel" hidden></div><div id="audit" class="tab-panel" hidden></div><div id="history" class="tab-panel" hidden></div><div id="method" class="tab-panel" hidden></div>
+</section></div>
+</main>
+<footer><span class="footer-brand">Paperbench Research</span><span>分数是固定协议下的模型判断。请结合检查项、主张审计和原文证据阅读结果。</span></footer>
+<script>// INLINE_SCRIPT</script>
+</body></html>

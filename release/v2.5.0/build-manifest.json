@@ -1,0 +1,24 @@
+{
+  "version": "2.5.0",
+  "applicationCore": "2.4",
+  "architecture": "x86_64",
+  "buildOS": "Ubuntu 22.04",
+  "runtimeSource": "https://github.com/AppImage/type2-runtime/releases/download/continuous/runtime-x86_64",
+  "runtimeSHA256": "1cc49bcf1e2ccd593c379adb17c9f85a36d619088296504de95b1d06215aebbf",
+  "appImageSHA256": "3af2201381c87a18e46eba301a11e4ec3f5ec942877a7f8ca8746d9f3a2df94b",
+  "parser": "PB-PARSER-2.4",
+  "scoringCoreBaselineVersion": "2.4.1",
+  "baselineCoreHash": "180a68e17b7a60d1f7a0337497a530d80d06b3acddef27a22a9a6b2028492cbd",
+  "coreSHA256": "24d37ff761f432821b24ecf51859b283ea0da90775d8abbdf50f1e2a8b538241",
+  "coreMetadataBlockSHA256": "a52f4c00f86479977293cf3d06cdc13cb687da827b4916c2d98b6046ad3bf198",
+  "scoringAlgorithmsUnchanged": true,
+  "coreMetadataExtended": true,
+  "scoringRuntimeByteIdentical": false,
+  "unchangedFiles": [
+    "style.css"
+  ],
+  "mineruHostEntry": "/home/xx/DS/MinerU/env.sh",
+  "mineruRuntimeBundled": false,
+  "realMinerUCallsDuringPackaging": 0,
+  "realModelCallsDuringPackaging": 0
+}

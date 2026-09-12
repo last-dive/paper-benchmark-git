@@ -1,0 +1,15 @@
+# Shared contract
+Deliverable is offline self-contained Chinese HTML. Author modules in this directory; root bundles core.js, transport.js, app.js into index.html. No packages/runtime dependencies.
+
+All modules use `globalThis.PB = globalThis.PB || {}` inside an IIFE. Core loaded first, transport second, app last. No module imports in browser; Node tests may require files.
+
+Paper: `{id,title,group,version,kind:'draft'|'reference',change:'structure'|'style'|'evidence'|'other',text,hash?}`. Title/group/version/kind/change are LOCAL metadata, excluded from LLM requests.
+Config: `{endpoint,apiKey,model,temperature,topP,maxTokens,seed:null|integer,responseJson:boolean,timeout:seconds,retries,concurrency,repeats,maxChars,paperType,anchors}`. Safe config omits apiKey; all others persist. Repeat range 3–30, default 5. paperType engineering/simulation/experimental/theory. Batch protocol uses ONE chosen paperType for fair same-rubric comparisons.
+Batch: `{id,name,createdAt,finishedAt?,status:'ready'|'running'|'paused'|'complete',demo?:boolean,papers:[snapshot],config:safeConfig,protocol:{id,systemPrompt,...},runs:[run]}`.
+Run: `{id,paperId,round:1-based,status:'pending'|'running'|'success'|'error',result?,attempts:[],error?}`. Attempts contain redacted request body (no key), raw response body, timestamps, HTTP status, usage if available, model/fingerprint; all failures retained. Successful result is `{dimensions:[{id,score:number|null,evidence:[{quote,location}],reason,improvement}],summary,limitations}`.
+
+Core exports (implement agent core): `DIMS` with id/name/short/definition/anchors (fixed IDs contribution,rigor,evidence,fairness,claims), `TYPES` object Chinese type names, `makeSystemPrompt(type,anchors)`, `parseReview(content,paperText)`, `summarize(batch,paperId)` returns `{dimensions:{id:{n,median,mean,sd,mad,min,max}},total:number|null,completeRuns,successRuns}`, `compare(batch,baselineId,{threshold,alpha})` returns flat rows `{paperId,dimId,n,delta,ci:[low,high],p,pAdjusted,label,complete,diffs}`; `median/mean/sd/mad`, `hashText(string)` async SHA256; `csv(rows)` escape safe CSV from array arrays; `validateArchive(data)` returns cleaned archive or throws; `exportArchive(state)` remove keys, include derived summaries/comparisons. State shape `{schemaVersion:1,config,papers,batches,currentBatchId}`.
+
+Transport exports (implement agent transport): `DEFAULT_CONFIG`, `validateConfig(config)` returns normalized config, `createBatch(papers,config,name)` async, `runBatch(batch,apiKey,{onUpdate,signal})` async mutates batch; `testConnection(config,{signal}?)` async minimal call no papers. Calls PB.makeSystemPrompt/PB.hashText/PB.parseReview. Request body bounded by configured maxChars: reject overlimit, never silently truncate. Errors abort UI via rejected Error where appropriate. Keys not saved in batch.
+
+Root owns UI app.js/template.html/style.css, assemble.py and final delivery. Agents add meaningful Node tests for own module and report APIs/decisions. Do not edit other agents' modules.

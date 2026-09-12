@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.AppImage binary
+*.gz binary
+*.png binary
+*.jpg binary
+*.pdf binary
+appimage/vendor/runtime-x86_64 binary
+# Preserve upstream license bytes and their original whitespace.
+third_party/** -text -whitespace
